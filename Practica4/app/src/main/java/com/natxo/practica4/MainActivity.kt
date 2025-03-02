@@ -19,9 +19,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initLogin()
+        register()
 
-        checkPreferences()
+        //checkPreferences()
+    }
 
+    private fun register() {
+        binding.btnRegister.setOnClickListener { goToRegister()}
     }
 
     private fun initLogin() {
@@ -50,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToNoticias(){
         startActivity(Intent(this, NoticiasActivity::class.java))
+    }
+
+    private fun goToRegister(){
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 
     private fun savePreferences(username: String, password: String){

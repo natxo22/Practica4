@@ -15,4 +15,8 @@
     <string name="resumen">Resumen</string>
     <string name="enlace_de_imagen">Enlace de imagen</string>
     <string name="enlace_de_la_noticia">Enlace de la noticia</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="guardar_noticia">Guardar noticia</string>
 </resources>
