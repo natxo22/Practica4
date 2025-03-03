@@ -2,11 +2,13 @@ package com.natxo.practica4
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 
 import com.natxo.practica4.NoticiasApplication.Companion.db
+import com.natxo.practica4.NoticiasApplication.Companion.prefs
 import com.natxo.practica4.databinding.ActivityRegisterBinding
 import com.natxo.practica4.database.entity.UsuarioEntity
 import kotlinx.coroutines.Dispatchers
@@ -15,7 +17,7 @@ import kotlinx.coroutines.withContext
 
 class RegisterActivity : AppCompatActivity() {
 
-    private  var usuario: UsuarioEntity? = null
+    private  var user: UsuarioEntity? = null
 
     private lateinit var binding: ActivityRegisterBinding
 
@@ -26,17 +28,23 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        prueba()
+        newUser()
     }
 
-    fun prueba(){
+    private fun newUser(){
         binding.btnRegister.setOnClickListener {
             val nombre = binding.etUsername.text.toString().trim()
             val email = binding.etEmail.text.toString().trim()
             val contrasena = binding.etPassword.text.toString().trim()
 
             if (nombre.isEmpty() || email.isEmpty() || contrasena.isEmpty()) {
-                //("Por favor, complete todos los campos")
+                val toast =
+                    Toast.makeText(
+                        applicationContext,
+                        "Por favor, complete todos los campos",
+                        Toast.LENGTH_SHORT
+                    )
+                toast.show()
 
             }
 
@@ -47,7 +55,13 @@ class RegisterActivity : AppCompatActivity() {
                         getUserCamps(email, nombre, contrasena)
                         goToLogin()
                     } else {
-
+                        val toast =
+                            Toast.makeText(
+                                applicationContext,
+                                "Email en uso",
+                                Toast.LENGTH_SHORT
+                            )
+                        toast.show()
                     }
                 }
             }

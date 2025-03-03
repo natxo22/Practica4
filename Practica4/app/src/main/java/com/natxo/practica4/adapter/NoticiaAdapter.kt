@@ -6,13 +6,14 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.natxo.practica4.NoticiasActivity
 import com.natxo.practica4.NoticiasApplication.Companion.prefs
 import com.natxo.practica4.R
 import com.natxo.practica4.database.entity.NoticiaEntity
 
 class NoticiaAdapter(
-    private var noticiaList : MutableList<NoticiaEntity>
+    private var noticiaList: MutableList<NoticiaEntity>,
+    val param: (NoticiaEntity) -> Unit
+
 ) : RecyclerView.Adapter<NoticiaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoticiaViewHolder {
@@ -41,6 +42,15 @@ class NoticiaAdapter(
             prefs.setLastClickedTitle(item.titulo)
 
         }
+
+        holder.binding.btnFav.setOnClickListener{
+            param(item)
+        }
+
+        holder.binding.btnDelete.setOnClickListener{
+            param(item)
+        }
+
 
     }
 

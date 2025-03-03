@@ -2,6 +2,7 @@ package com.natxo.practica4
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +26,7 @@ class NoticiasActivity : AppCompatActivity() {
     private lateinit var layoutLineal: LinearLayoutManager
     private lateinit var adapterNoticias: NoticiaAdapter
 
-    private  var usuario: UsuarioEntity? = null
+    private  var user: UsuarioEntity? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +35,9 @@ class NoticiasActivity : AppCompatActivity() {
         binding = ActivityRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        usuario = intent.getSerializableExtra("Usuario") as? UsuarioEntity
+        user = intent.getSerializableExtra("Usuario") as? UsuarioEntity
 
+        Log.i("aaa", user?.nombre.toString())
         initRecyclerView()
 
         closeSesion()
@@ -46,7 +48,7 @@ class NoticiasActivity : AppCompatActivity() {
 
     private fun initRecyclerView() {
 
-        adapterNoticias = NoticiaAdapter(mutableListOf())
+        adapterNoticias = NoticiaAdapter(mutableListOf()) { e -> favButtonAction(e) }
         layoutLineal = LinearLayoutManager(this)
 
         getNoticias()
@@ -72,7 +74,7 @@ class NoticiasActivity : AppCompatActivity() {
     }
 
     private fun goToLogin(){
-        binding.btnAdd.setOnClickListener({
+        binding.btn.setOnClickListener({
             startActivity(Intent(this, MainActivity::class.java))
         })
     }
@@ -104,7 +106,7 @@ class NoticiasActivity : AppCompatActivity() {
                 .noticiaDao()
                 .getNoticias()
 
-            val favoritos = usuario?.let {
+            val favoritos = user?.let {
                     db
                     .favoritoDao()
                     .getFavoritos(it.id)
@@ -126,8 +128,9 @@ class NoticiasActivity : AppCompatActivity() {
         noticiaEntity.esFavorita = !noticiaEntity.esFavorita
         adapterNoticias.updateNoticiaAdapter(noticiaEntity)
         lifecycleScope.launch(Dispatchers.IO) {
-            // Esto asignará -1 en caso de que usuario sea null. (No debería)
-            val favoritoEntity = FavoritoEntity(usuario?.id ?: -1, noticiaEntity.id)
+            // Esto asignará -1 en caso de que user sea null. (No debería)
+            //user?.id ?: -1
+            val favoritoEntity = FavoritoEntity(user?.id ?: -1, noticiaEntity.id)
             if (noticiaEntity.esFavorita) {
                 db
                     .favoritoDao()

@@ -52,7 +52,7 @@
             android:layout_width="185dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/register" />
+            android:text="@string/i_dont_have_an_account" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
