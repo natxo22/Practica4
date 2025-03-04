@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Practica4</string>
+    <string name="noticia_image">Noticia image</string>
+    <string name="ver_noticia">Ver noticia</string>
+    <string name="username_login">Username</string>
+    <string name="password_login">Password</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="login_missmatch">Usuario o contraseña incorrectas</string>
+    <string name="a_adir_noticia">Añadir noticia</string>
+    <string name="a_ade_una_noticia_al_noticiario">Añade una noticia al noticiario</string>
+    <string name="titulo">Titulo</string>
+    <string name="resumen">Resumen</string>
+    <string name="enlace_de_imagen">Enlace de imagen</string>
+    <string name="enlace_de_la_noticia">Enlace de la noticia</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="guardar_noticia">Guardar noticia</string>
+    <string name="i_dont_have_an_account">I dont have an account</string>
+    <string name="actualizar_noticia">Actualizar noticia</string>
+</resources>

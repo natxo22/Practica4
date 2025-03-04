@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_cottage_24"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/fav"
+        android:icon="@drawable/baseline_bookmark_24"
+        android:title="Favoritos" />
+
+</menu>
