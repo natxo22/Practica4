@@ -60,6 +60,7 @@ class AddNoticiaActivity : AppCompatActivity() {
 
     private fun goToNoticias(){
         intent = Intent(this, NoticiasActivity::class.java)
+        intent.putExtra("Usuario", user)
         startActivity(intent)
     }
 }
