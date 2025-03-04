@@ -48,85 +48,45 @@ class NoticiasApplication: Application() {
             if (noticiasObtenidas.size <= 0) {
                 listOf(
                     NoticiaEntity(
-                        titulo = "OXO Museo del Videojuego, el ocio electrónico encuentra su sitio en la oferta cultural de Madrid.",
-                        descripcion = "OXO Museo del Videojuego inaugura en Madrid.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/i/?w=1600&i=01733207829945.jpg",
-                        noticiaUrl = "https://www.rtve.es/noticias/20241203/oxo-museo-del-videojuego-madrid/16355153.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Un equipo de astrónomos descubre que Venus nunca ha sido habitable.",
-                        descripcion = "Con esta averiguación, los expertos dejan atrás las especulaciones de que Venus y la Tierra eran similares.",
-                        fecha = "2024-12-03",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/i/?w=1600&i=01733224158774.jpg",
-                        noticiaUrl = "https://www.rtve.es/noticias/20241203/astronomos-descubren-venus-no-habitable/16356982.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Ucrania, ante el invierno más duro de la guerra: Estamos sin electricidad 12 horas al día.",
-                        descripcion = "El 70% de las infraestructuras energéticas están dañadas por los continuos ataques rusos.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/i/?w=1600&i=01733265482457.jpg",
-                        noticiaUrl = "https://www.rtve.es/noticias/20241204/ucrania-ante-invierno-mas-duro-guerra-estamos-sin-electricidad-12-horas-dia/16358019.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Almeida apoya a Ayuso: No es exagerado decir que hay una maquinaria del Estado que busca su perjuicio.",
-                        descripcion = "Cree que la actuación del fiscal general del Estado no se justifica de ninguna de las maneras.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/a/16358351/square/?h=320",
-                        noticiaUrl = "https://www.rtve.es/noticias/20241204/almeida-apoya-ayuso-hay-maquinaria-estado-busca-perjuicio-politico-personal/16358350.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Ford Almussafes reduce los turnos en su área de motores para 2025 tras un año de caída productiva.",
-                        descripcion = "Desde el próximo 2 de enero, operará en un solo turno de mañana y otro mini turno de noche voluntario de domingo a jueves.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/i/?w=1600&i=01733326736523.jpg",
-                        noticiaUrl = "https://www.rtve.es/noticias/20241204/ford-almussafes-reduce-turnos-fabrica-motores-2025-caida-productiva/16359282.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Las fuerzas israelíes avanzan en Jan Yunis y matan al menos a 20 personas en esa zona de Gaza.",
-                        descripcion = "Una delegación israelí visitará El Cairo para abordar un posible acuerdo de tregua en Gaza.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/i/?w=1600&i=01733315459874.jpg",
-                        noticiaUrl = "https://www.rtve.es/noticias/20241204/gaza-israel-palestina-libano-oriente-proximo/16358653.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Cuba sufre un nuevo apagón general por problemas en su red eléctrica.",
-                        descripcion = "El octubre se registraron tres apagones, y en noviembre el huracán Rafael dañó de nuevo la red.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/i/?w=1600&i=01733313619485.jpg",
-                        noticiaUrl = "https://www.rtve.es/noticias/20241204/cuba-apagones-general-red-electrica/16358762.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Lotería Navidad 2024: los números más 'raros', curiosos y buscados del sorteo.",
-                        descripcion = "La terminación 29, día de la riada que asoló Valencia, está siendo una de las más demandadas.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/i/?w=1600&i=01732726362730.jpg",
-                        noticiaUrl = "https://www.rtve.es/rtve/20241130/loteria-navidad-2024-numeros-raros-curiosos-buscados-sorteo/16341403.shtml"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Carlos Sainz, a un mes del asalto de su quinto Dakar en su estreno con Ford.",
-                        descripcion = "Un mes para que Carlos Sáinz intente asaltar el que sería su quinto Dakar.",
-                        fecha = "2024-12-04",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/v/16359152/vertical/?h=400",
-                        noticiaUrl = "https://www.rtve.es/play/videos/telediario-1/carlos-sainz-asalto-quinto-dakar-estreno-ford/16359152/"
-                    ),
-                    NoticiaEntity(
-                        titulo = "Día Internacional de las Personas con Discapacidad.",
-                        descripcion = "Hoy martes 3 de diciembre se celebra el Día Internacional de las Personas con Discapacidad.",
-                        fecha = "2024-12-03",
-                        esFavorita = false,
-                        imagenUrl = "https://img2.rtve.es/a/16357913/square/?h=320",
-                        noticiaUrl = "https://www.rtve.es/play/audios/24-horas/24-horas-dia-internacional-personas-discapacidad-hay-llevar-terreno-dice-articulo-49/16357913/"
-                    )
+        titulo = "Incendio en California",
+        descripcion = "Un incendio que avanza sin control en Los Ángeles y que ya ha llegado hasta el cartel de Hollywood.",
+        fecha = "10/01/2025",
+        esFavorita = false,
+        imagenUrl = "https://upload.wikimedia.org/wikipedia/commons/1/1a/PalisadesFire_fromDowntown.png",
+        noticiaUrl = "https://www.antena3.com/noticias/sociedad/noticias-hoy-viernes-10-enero-2025_202501106780c357af217500014b8c99.html"
+    ),
+    NoticiaEntity(
+        titulo = "Karla Souza pierde su casa en Los Ángeles a causa de los incendios",
+        descripcion = "La actriz mexicana publicó una serie de videos en su cuenta de Instagram, acompañados de un mensaje en el que asegura que ella y su familia están bien.",
+        fecha = "10/01/2025",
+        esFavorita = false,
+        imagenUrl = "https://imagenes.elpais.com/resizer/v2/FKBJG622JNB6XLM4VNXTUWAFNE.jpg?auth=83dabb9443c1fbaa8b1cec0d6c5dc4dd42ee6089d1b6a5e1be7a5218bd666650&width=1200",
+        noticiaUrl = "https://elpais.com/mexico/2025-01-10/karla-souza-pierde-su-casa-en-los-angeles-a-causa-de-los-incendios.html"
+    ),
+    NoticiaEntity(
+        titulo = "Dos detenidos por la muerte de un operario de limpieza",
+        descripcion = "Los arrestados, acusados de delito de homicidio imprudente, son también trabajadores que se encontraban en el centro",
+        fecha = "10/01/2025",
+        esFavorita = false,
+        imagenUrl = "https://imagenes.elpais.com/resizer/v2/ONASXR5ZLFHCTGBDVJC4TLXSOM.jpg?auth=4ce4330af69189a75f726d692bda46eb0fc87753386dd705b1a4bcac53239999&width=1200",
+        noticiaUrl = "https://elpais.com/espana/comunidad-valenciana/2025-01-10/dos-detenidos-por-la-muerte-de-un-operario-de-limpieza-en-un-colegio-danado-por-la-dana-en-valencia.html"
+    ),
+    NoticiaEntity(
+        titulo = "El Real Madrid completa su resurrección en Kaunas",
+        descripcion = "El conjunto de Chus Mateo vence con solvencia al Zalgiris (64-83), su quinta victoria seguida en la Euroliga",
+        fecha = "10/01/2025",
+        esFavorita = false,
+        imagenUrl = "https://imagenes.elpais.com/resizer/v2/7KKQELWWEJBA5GMUUEC5MRCLFE.jpg?auth=d3a5490d0fb7b6d36c1c7ae8fc703d066d983f3f129d37315c613205170bf484&width=1200",
+        noticiaUrl = "https://elpais.com/deportes/baloncesto/2025-01-10/el-real-madrid-completa-su-resurreccion-en-kaunas.html"
+    ),
+    NoticiaEntity(
+        titulo = "Atrapada entre el PRI y Morena, la colonia Cuarta Transformación no termina de transformarse",
+        descripcion = "Los vecinos del barrio irregular, en Tultitlán, Estado de México, acuerdan una consulta popular tras arrancar los nuevos nombres de las calles, que homenajeaban a López Obrador por decisión de la alcaldesa",
+        fecha = "10/01/2025",
+        esFavorita = false,
+        imagenUrl = "https://imagenes.elpais.com/resizer/v2/YVCCFVWHG5FPVAJ3O5KSXMYSBI.jpg?auth=1d2a56c377e253263a2b1a1c6fd0559b76e25729bb58c71bf9f3946d1c49d01f&width=1200",
+        noticiaUrl = "https://elpais.com/mexico/2025-01-10/atrapada-entre-el-pri-y-morena-la-colonia-cuarta-transformacion-no-termina-de-transformarse.html"
+    )
                 ).forEach { noticia ->
                     db
                         .noticiaDao()
