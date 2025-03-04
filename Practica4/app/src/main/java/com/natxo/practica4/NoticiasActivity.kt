@@ -79,13 +79,17 @@ class NoticiasActivity : AppCompatActivity() {
 
     private fun goToAddNoticia(){
         binding.btnAdd.setOnClickListener({
-            startActivity(Intent(this, AddNoticiaActivity::class.java))
+            intent = (Intent(this, AddNoticiaActivity::class.java))
+            intent.putExtra("Usuario", user)
+            startActivity(intent)
         })
     }
 
     private fun goToLogin(){
         binding.btn.setOnClickListener({
-            startActivity(Intent(this, MainActivity::class.java))
+            intent = (Intent(this, MainActivity::class.java))
+            intent.putExtra("Usuario", user)
+            startActivity(intent)
         })
     }
 
@@ -160,6 +164,7 @@ class NoticiasActivity : AppCompatActivity() {
     private fun editButtonAction(noticiaEntity: NoticiaEntity) {
         intent = Intent(this, EditNoticiaActivity::class.java)
         intent.putExtra("Noticia", noticiaEntity)
+        intent.putExtra("Usuario", user)
         startActivity(intent)
     }
 

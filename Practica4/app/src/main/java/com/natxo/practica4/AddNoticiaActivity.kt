@@ -2,6 +2,7 @@ package com.natxo.practica4
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -23,6 +24,7 @@ class AddNoticiaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        Log.i("aaa", user?.nombre.toString())
         binding = ActivityAddNoticiaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -58,7 +60,6 @@ class AddNoticiaActivity : AppCompatActivity() {
 
     private fun goToNoticias(){
         intent = Intent(this, NoticiasActivity::class.java)
-        intent.putExtra("Usuario", user)
         startActivity(intent)
     }
 }
