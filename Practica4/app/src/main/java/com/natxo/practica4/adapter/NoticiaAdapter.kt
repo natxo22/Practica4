@@ -52,8 +52,6 @@ class NoticiaAdapter(
             prefs.setLastClickedTitle(item.titulo)
 
         }
-        //Esta corrutina permite ser usada en el Adapter mientras que lifeCycle solo puede ser llamada en activitys o fragments
-
 
         holder.binding.btnDelete.setOnClickListener {
             onDelete(item)
